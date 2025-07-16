@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharan U R - Portfolio | Computer Science Student</title>
+    <meta name="description" content="Portfolio of Sharan U R, Computer Science & Engineering student at MITE. Passionate about web development and Java programming.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>Sharan U R</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#achievements" class="nav-link">Achievements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+                    <div class="toggle-track">
+                        <div class="toggle-thumb">
+                            <svg class="sun-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                            </svg>
+                            <svg class="moon-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9.37 5.51c-.18.64-.27 1.31-.27 1.99 0 4.08 3.32 7.4 7.4 7.4.68 0 1.35-.09 1.99-.27C17.45 17.19 14.93 19 12 19c-3.86 0-7-3.14-7-7 0-2.93 1.81-5.45 4.37-6.49z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="profile-image">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAEsASwDASIAAhEBAxEB/8QAHQAAAQQDAQEAAAAAAAAAAAAAAgEDBAUABgcICf/EAEAQAAEDAgUCBAQEBQIEBgMAAAEAAgMEEQUGEiExQVEHEyJhCBRxgTJCkaEVI1KxwTNiJCVy0QkWGDRDooKSsv/EABoBAAIDAQEAAAAAAAAAAAAAAAABAgMEBQb/xAApEQACAgEEAQQDAAIDAAAAAAAAAQIRAwQSITFBBRMiURQyYSNCUnGh/9oADAMBAAIRAxEAPwD6FYfYUcItw0f2UoW6qJR+mCMewUkbhdspYQslSAJSgiYlIA4ScBYpr7IsxL1SJRyhuxC2CVYlFkgEtssDdkSxAxLWSFur2TGIYlS4XSyVNZPFS08Y1PlmeGtaPclcV8Qvi/yFklxgpqx2YK21/Lw4B0bf+qQ+n9LqLYUdxsAN1Q5jz3l7KUZkxjGKLDgOlTM1p/Qm68JeIvxuZxzIJ6bCHQ4BRvFh8qNU1un8w8fYBedMazXXYtVS1FbWTVdS8kvkleXPd9SUqbJJH1CxL4ovDLDYJHuzXRTFgvoh1PcfoAFpk/xy+G0chYJcQeOA8Uu37m6+bUla9wIe/TYbglRjXEjcl+/HZG0Z9JT8dfh4XCzcTt1Pyw2/+yJvx0+Hb3RttiQ1GxcaYWaO59S+bHzTm6iSR/tP/dJ86QPS4gkW0o2CPq7gfxM+G+Yqdk0WaKGAk6dFU/yng/R1lveEZrwbHo/Mw7EqOvb3p5mv/sV8axXvBaXO0u91NoMxVeGyeZS1U9HIN9cEhYf2KW1roHE+zWtjxsQgIC+XGRfii8QcmFjaLMU9XSsP/tq8/MMt29W4H0K9D5I+P2mnfHBmnAHQnh1Vhz9QHvodv+6OUR2nr5xJ6IHDUtZyL4qZX8SKP5jL2L0+IaQC+FrrSx/9TDuFtRsRspJkaojvFuibLb9FJcEBbsrk6ERyyyEs9k+Rb3QkKXYDBYOqF0YcpBbfokDT0UhEcQgrDCAOE9oslsSi2FEfyARuN0ohafyp+3RLoCVjGflmH8oWfLM/pH6J4NsUWlDAl04tG36BSARZMw/6YTgNysjLEOLNW6SxKwpoYf1Sk72QApRfqpiYqxYiAugiZwEt1n3Qk7oALVYKJiWK0+FUU9XVytgpoGGSSR5sGtG5KecV4r+NLx0fLVPyPhU5bBDZ2ISxu3e/pH9ByfdQ7GjlfxFfEXiPi1jstJFKaXLlM8mlpASPMt/8kncnp2XCn1rpnDU4iMDclR62pNnFzrk72HZQPPL7MF7W2t0U6Lf4iTPWse42s3/c7lRmlxbqjNiOpSSQOaDuHE9Twle54j0DZ3sOiVgNSNEps8jt2usEF2gub6T2KJ5cQC61gdIHcJBNoje0Al5N7IsDJYSHjVuwjgndG2mGplzqJFrN/EmnzOL7O4FrLI7sJPmaS4lFhQRY1srtnuZyHdQU09jiS4m7ed+Et9G7XH3v3Sxve5vqvo/p90AY19gfytJ20lPMrbOHqcLdgm5WtlIBsywtcJt0RZYfiHdMRuWTs94rkzGabFMJrZKGtgIc2SN1j9COoPYr6I/Dv8RtD4x0Joatgocw00YfNAPwTN41s/yOi+YEUr49JIFh1C6Z4KeIM2QPEDBMZjkLYoZ2tmt+aJ2zxb6FKhNWj6vrDwmKCrjrqSGoidqilYHsPcEXCfUirsG1khCMi6TSFYhAFqTQfonCLBJv2UgGtJWadt06k0pABpS2siDTdYWkoAQC6yxRAEdEVgmxpDkP4QD2TrbD2TUQ0gJ0OCxlgV0XITd0YNlIAhsiAshtfhZZMQSW6RYmyIpN0hKIbpDykBofjN4kU3hbkLEcalLXVLW+XSwuNjJKdmj7cn6L5UZoxyfHMWq66rldLPPI6WR7zcuc43JXrH4+MZr5Mz4Lh7/Mjw6KmdLGDsx8hPqI722C8a1AvIA4EE9/qjonFWRpXGdx3v0TbIuwBcTwrGmgdM30NC2LCMm1WLNIiYHEgC5HG4F1XPKsfMmaIYpZHUUahAwuNjfV0Ul19TiwXktY3XqrJ/wp4TiGExjFZZhWP3EkD+O2xFtlvGB/B7lbD47VdVV4hc3GohhHtdousS1sH+qZs/DnH9nR4mw3LVTiTnGKMgMF3O6BP12Xo6GEGZ7DIT+Fv7L1tmH4PDE+WXL2NPgY/f5Wqbdn/wCw3Wku+EHN0sxNRPh7Y3Gxe17nEjvayf5KJfj0v6ebY6cAXEVx+EG1909FgMsjmjy7Nsbu7FetMI+Es0jnGorGTgD0tDLaT791lf8ADpmSFgioDhlQ3jVUMLdPbgKqWs8RRZDRp8ykeUXZblG7XXaOhFroI8uVFS60bQbcutsvV2G/Clidc58mM4hCZTsGw3DGDuAOfuto/wDTxSYLhxpaaq1MIOq8Yu49d1D8yaVqJYtFBunI8Pz0L6WQRvBtfp1TfkEHSQG/uvV2I/DNTSzfMmrNKAP9INBA/VadmTwHqKChknpYtfl3JD/ze4/7KyPqEHSkqIS9PmrcXaPP5huQQCB1UijeY5Gi42Kn4jhraedzHEDkXbwSq+KMseW7G1rLqKSkrRypRcXTPpt8JOcanOHg5hklZKZ6ihc6jMjjclrANN/sQPsu1Gy8nf8Ah+4zJUZTzHhcjgWU1THOxnUa2kH/APkL1i4bqRmBWIrJQ3ZWoQBF0oCK11iYhNKQC6Ig2SEbKN+ABtZKADyssUoapcAYAEqUhYBdRXY+hYuPsnEEf4QjWUnYoPRF+VCBuivdMG6FabowELSAUXKkRMRfZIOUSVgJZI4IwLoHixTQHiT4+popsy5fgH+tFRPefoX7f2K8aVEJ+ZID9Tr73HW69afHW5zvEugHIbhzLC+49Tl5XLNdQ2Nm+s3KGXQXBJwXDJH1rGMjLmtdbYr2BkPAKDC8HovJoozKAA5+nb3ueq4d4P5VqMZxaMMgBpoTrllfwTfherMDwzy2RxhoLQLWsvL67M8uRQj4PV6LEsWNzl2y9wrSCy2zB1HC2aCoAaL8eyrqHCXOLbt9Psr2nwUhva/dTxQkivJKLYy6qaPcoDUh/ue11KlwLUmThDouAr6kU3Ej626tuShle1o9P7lSmYc+1yLFK7CpH8NS2sfxsqpakM5uoU9U1zefUfdbIMCc62sBM1eWY3RkbXRtkyW6CNLqWGU6iQbbrWsxvDaR8YGzhYldDnwQtu3t+61nHcvl0Ty1tz1WTLjklZsxZIt0eGfEDA5aLGqtgjsxri9hbtcc3Wm+WaiQuJ3vyO69E+NeUJDRGsjhJki2db+lefo4T5+k3a8OADeAu1osu/Gl5Rxddi2ZL8M9yfATkufDsr4zmGRz2R10raeOMjZwZcl36my9Vkbrkvwl0z4PAvAfNDQ55lcNPUF53XXy0FdNHCfY0G3SotNuixOxCaUmlEssnbAG10mlERZJe6L+wA6oglt7LLIdPoDFixFYJJMAGfhRjhNx8fZGCqCaD1bJRukaiaiwYVkSTSUYaixCDlEksEqYCtSPSt5XOvFfxWi8PRSRNDHVNSbN8xjngdvS3cqE8kccXKT4LcWOWaahBcnlb47qXyvEfCZTsJcPFz9HuC4T4RZWizTmvy6iISUsLDI9p+uy6B8T+bMWzfnCCoxQRXipxHB5MZYNJJO9yTfdSvhrwBz6HFsS0X8x4gjJ9hc/3WTU5t2Byh5OlpcLjmUMi6OqYOcGyfQPqauSHD6KMWa3guPsOSodP8SGW6dxDKeXygbB7h6nfZVOavCiLHqh9XimIvh0jZjCLNHsSuaYtgeU8NcIYHVdVIXaGPY4DW7s3Ylx+gXDwKEP25Z6DIsmW64R3+g+KrK0TWGSGoa0mx9FyPe3ZXcXxc5C1tY+rni6XMJtf7LxtmmOiwGethny5i5dSQNqZ/Pl0eUxxs0uHIv7hRcPwIYviE1K3L2IwzxQNqnxPaXkQnh92m9tx06rrXJLiLOZ7cZSrej3hQfEPk7FQx1NiTXxvOnWGmwPv1C3OmzPR1cAkie17HcOB2K8H5WwDDWPbLD5tPKRY+vU0/Qrvnh66vZRRU7Zg+nYdgeVg/LW7a0dH8Co7rO/NxmFjbn+yi1ebaKkYXSSNYPdaxPTVPyt2uPH6rmmemYjHTyRiU6fxb7bq2edwV0Z8emhkdWdGxnxrwLB4pHyVQfoNnAb2XI8z/GnhtDK+HDcKlqgNvOmkDG3+nJXIMw0c7opXTveWuN/Li/MVp9ZkXGIsCOYGYMxuF+a2KOUtFpHuNhZztiL8kCylhzSyukizNpYYFbdHUMT+MHMWKksoqOmpQPztBef0Kq4viSznqcZBC9p39cG302XOsJzRiNFPWQ/w3CgaKqNJUQ+fE6QPBsXaQ25aD1Gy3/H6upyhVQQZhy5BTSSAFmtgDJB/skHpJ9jZX5HJL5Q4M2OEJtbJ8mz4H40YVnf/l+N0jcOrH+lsh/0ZD233B+q5b4p5VgwDNYNPGGU80WtoG/1XVcFwTLubaJkkNEyIu/K5li0qg+IDLb6TAsGqY2uf5DjTvd3abW/yqtM4qe6JPVY5e3tlye1vh5wsYX4NZUhadQdRNluOur1f5XRNIXifwg8fcz5My3gWG1z46jDmNbDBFURBrgwbABwtf6lezsJxKPFsNpqyL/TnjEg+4uuvjzQyScY9o87m0uXBGM5rh9ElzQhsjIuhIWgyA2uksEZCFT6AHSs07pSNliVoBDskSndYBdTpAJZZYJTykQlQDcfCMC6Bn4U4FjJCgI2oBsjGyQDg2KIG6BqIGyYBLEgN0qYGXXnbxTp5sW8WKRxjL4qYaGjoDYG/wC69FgbXXIMfEbPEHFoXACUxNniuORpANv0WbUrdjo6np09mZv+M5d47eFmH5oysK75htPXUMTnNIP47jj67Jjwcye3LOScOpS3+a9vmv231O3W44pl2PNtHVRzG8cLHPcAbcI8q6TQwC1gGgfsuVNykq8HYSUXfkjY1kw43E6KR2mNw3NrrVsI8NqDJmPsxVlOK2pbs2WobqLP+n+n7Ls9LSiZndSRg0b7a2B31CcMVfJdh78q2vo85eMXh7lzxPrXV9TNLhmIvhEE7o4hJHUMBuA5pLdx3v8A2T3g/ljB/CKCp/hlBJi+J1DfKNTMzS1kf9LWNOw68r0UcBoDu+micR3aCm3YfDESIYWN+jQtXzvc3yUXhfCh/wCnG5Mj0NXVjEZcPosNlfJ5krYoXAzA8tI1W+9rq7hw2npHl9JB8vCSLMHK3TEMJZGfMks97uh6KnqQxrwwC5vYBY8qTdm2GSUv+i2pC/5RgcL7LTcyUgrK3y5W3DlvFNMBThpG4FrFa1isgNVrLbW2soTVxQsfEm6NIxHw+o8bqohO3yIYRcMaxpZM7/eCFZZgr6qryzPlvFsBbiGFSMDB8uzQWgfhItwRYHhbdhskMpsbFp4Wx0dCWsD2tD29AeVowOlS4IZZJv5q1/TyxlrwmyjljHWV89FiFWGyea2mmc0MJBuNdmgusVvGcHVPiU5tI+h/4Y7Fgj9Nvcld6GFU04HmQMLvdoKadg8MR9MbR9lOSyVt3cEI5McXujDk4pgfhbT5fZF5Lnstywm4RZuypT49hzaOpaDEJY3m/FmuBK63X0kbY3CwJ7rR8wx+XFMAbHSbfoqowUXaJvLLJ+xrPipl6lq8LopaSFgiiLWsDALNAO1l6N8OgW5LwoO5bCAuASNlfluJktnuc+NjAOpuF6Sy7QfwvAqGlP4oomg/W263aVXNyMPqU6wQx/TLFCeUZQO5XUR5wR3CFKSkUmMQG6UmwSi3VIkqYApb7LLBYSLKwBCkWLEwGozcJwbhMs2TrSsJIIbFOgd00E42/VABA2RIAbhGmAoRIUSGAQ4XN/FnLNRP8pjWHjTW0p0k9HN7O9jx910cHoknpo6unkhlGpj2lpChKO6Liy3FkeKamjzvh+JVc89VLh8Pk1ZZpnoZ+HX5sVmWJZItUU8JglY4tMTjct9r9VveM5T/AIXVvc+FwYT6Z2A2I6C/RaXiFG+ixgytY8wSNFpCNi4dLrkzg49no1lhk5iblQ1NhYGyvKWpbM0LSaWoLRcOsVZ0+KGFhNiQ3t1RGVClC+jZamnMhaWvc0NN7N6+xWN0RC52v1KqoMW8xuo3aD0Kbq8TcRsPordy7IbZPgqs2Yq6ne1kbdcr/SwBRsFw9zdLpyHynckqDizpGVTKwMMwZe7Wi5+tlz3NfitjJxanoMs4E/Fahp/mukmMDWD6lpuf0WWbSlbN2LG5RqJ3+DAmvp/NLRbqb8KtxrL0EULiXDjglc8h8U6vD8Oi/iUEtFNb1xudqt9xsVofiJ444sMPJwHDXYnL+Z8spihaOvqAJJ+gVksuNqqIR0+Zvvg36WKagqTNG68TXWc3st6wDF2zUzLkb9FxLIGeq/N2GNZLh0sFRb+Ybl0Tfo8gX/RdFopDShtnG4G9lTikk7RbmhxtfZ0MyMsCDva6rarFmsu3a6qYsTe6O4dsAqfEKkGcyB1nLTLIvBkjj+yzr8UDrm4sVp2O1DJ2Oa4kNedG3O6kT1T5Hb/hTmE4bJiGIsd8nUVcbekMZeNXS9lXFuXRNpQ7JeRssV+ZMzUEkkAp8HoSJWxk3LzbYu9+Nvqu+WsFTZOwGTBcM/nt0TzHW5n9A6BXhXZwQ9uP9PPavM82T+Ib4QnlGeUNt9lrRiGysREJLIsBEhRkWCA/shNsBLpEtvdKQrABWLFiAGGG4TjbpuM+lGOFz7JBtKcB9roGhGNlIAgERNkg2KIi6AMRAoUqACuja5ABZKDZAEhjrdbqhz/hv8VytVta3VJEBM3/APHn9rq5aU4QHtLXAFpFiDwQk47lRKMnFpo8+09R6OymCoswWN791maMIOW8dnpDfyj64nHq08fpwq7zTpAH1XAknFtHq8clOKkvJZtr9O2qw91UYznnDMEaWz1DTJ/Q03cfsqLOBqpKAspiW6tnvDrFo9lx+lps2sxOaqwrLkGIU0RsZqyciV/u0WsVV7krpI1QxJq2zvdBmSTEIxLFA8MdwSOVbQebPcvi09BqXC6LP+bKuT5d7qPC3NNvKfG5hb9bhbxl/Dc24/DrGI0T2+5ef8LTBynxQsmmcFuk6Rvj8IpX3dW0zZx/TpDgU1iNJQtgYyOCGKMD8D7C32WpTZSztA6TyqzD5W2tYSubf/6qLB4fZqnBdV4vhsQ5cSHyEf2VrhP/AIiWKFW8hsxZJ5LmQmIgbAMcP8LVsbzPV4CNUlM7SDYuHC07NeE1WFSOEeYIZpgbaqeFzP31LThhufcfqvlqbGDBh/5554dRI/2grJNTXBfHFFLddo7jg/iHhmJ0jHx1LB3aTYgqfU1rZfcHcHuuL4P4U45G7yauq+aY8/6xAZp99l0V9UyGdlLG/X5DAwuPWypTl5Bwj/qXXm6uq7j4V4eaDK0cjm6XVLzL9uB/ZcXyfg02acbp6GIHRfXK/o1g5K9JU1NHRU0UETdMcbQ1oHQAWXY0cH+zPPeoZKqA49ybcicUBPRdY4bAtclIjQlAhEJ2RJCEACRsh6o7XSOFgmnQCfdIiASEK2PIAJE5aySykBEYbBGCm2bjfZOhYKJBh3RG1NjlGHJWA6N0XCBiIlSsBViwcLEALeyUG6FKDZADgKca5MpxvKANY8Q8of8AmnCC6CzcQpwXwn+ru0/X+64IMZdTyPgnY6KeMlrmOFiD2XqdouvPHjng5oc3/NwR/wCvC17gB+IjYn9lztXBVvXZ2fT8jcvaZS09eyokDHgFjj1Wy0wgZTehoAHYLnmHYgxxFyBvuOoW44VO2ZoAdYHa65kXydqcSXNh2F4kQKyljlPR5G4+6jvy8KMO/hdV8u0/kcLhWbMN1Xc13Cl0uHaidTifZXRb8EN9eeDSpqbHIZDrngt0cXO/7piXA8Tq2WnxBjYf6Ymk/wByt4rIGQk3ju09TyqjS6pcQxjg3i/ROUpdNlscj8GuU+WMMw71yR+fLzqeP8IxPCZQGsDWjoFb12Elrdbn29gqKqhZSgkG7vdZZXZbF7uWyNmLMDhT+RTCzhsXLX8IhmqKlkUMb5qiV2lrWi5c48IK6qa6U3NzddJ8BKWIZyifLGHv8p5jJ/KbchSxRc5pMeaftYpSSOxeGuRm5NwQeeA7Ep/VO8dOzR7D+62x3VOOOyacV6iEVCKSPDTm8jcpdsC6ErDysUysQ3QojdJZACLCLrFiAE1eyQm6wiyxAGLEm90qdgJbcpbDsk6rLhWKQFcwnunQ7ZNsKIBZCQ60o2ppv0RhyiA8126IbpkElOAoXABjZEEAKIEJ2AfKRLcWWXATAUbI2Ju90QOyVjokNK5T44U7TUYRNa5cJGH7WP8AlTc/+M2GZNqzhkBbW4uW6vIDvTGO7j/hcMqvGCoz9m59DUVIl+Uj8zy4wAxhceB16dVRqIXhcmdHRwmssXQWLZdMhNRTHyphvtw76hR8HzN/DZ/lq5phdfYng/QrcqVjZ4wCPuqbMOXG1URLmBwA22XBcWuUemUlL4s2LDswwSsa5sof9CpzsdjaQ5hB+/VcYlwSqpHF1FVyU7v6b3b+ipcYxbNOFxlwJmjH5mBRWbwyf419M7nPjLJTeSS57EoHY7T08Vg5oHcHqvLFfn/GHSOEoqHH+kDZDBnLG614ayOX21E2Cfuli03g9IYhmOE31SNv7notLzFnCAaoYHedKejd7LnlJSYrWlrqqqfG08tZt+62jBMvNDgbar9T1VcshcsCiPYRSz1s4lnBNzcN7LoeUMdlyrj1JWQxiVzTp8txNnA7WVbh2HR0rQSL24ATWNeZDEXtJa8bt9vdOEnGamyvNFTi4I7zhvjdgs9UKXEXfw6a+nU83ZfsT0+63uCpjq4myxSNljcLtcw3BH1Xzo8T/EcZnzCaympThWOUkbWYhAHfyqlvDZmD34PuvRnw7Z2rKPLlIyqmfPSS8sfuYvcey9nFQyrdjPG5tN7avyejliGGVsrGPY7U1wuCOoThF1Wc+gViwrExAkWSIz7oeqAESWRHdCHIATql2WEdUiAEJWWCVJdTToCsYbBOByaYUY5WYmOscCeUXKBvsiHuoiDGwRDlACjugA28JQUAN0pQA6DsiBTGr3QOqmRficB9UATGi5VHm/HP4Phc743WeGE3HRS34vCxvpOo+y1HNwNbRStO+obhWwhbVk4nzy8TfEXEKLNeKzMle2umkddznXs3orb4dG1lTjlbidTI6R01mAnqNyT+61Xx/wAHOHeIdVci8lnaR0HRdb8CsLY3B6R7Ra4uVzPUJtR2o9Lo1unb6SO+4Y8FoHCsaiIyw2tv3VXQODC0K/pyHsG+/Vc+H60aZcOzScRw8tebtse9lUyEseWSNGg7b8Lf66jbPcEBUdfgBlY4MP7KiWOujVjy+JHP8VyxhxLpQWAu30jZQKTAor2iaLX5AWw4nkutc/UJNTb303Uqgy9UQRWfYX91lqV9HWU4KN2UzcOipLNID3FXWE4XUSkFrdDPfbZT6TBY2zB7rPI6FbFDEI2gAbW4WiOO+zBkzeIlXDRiDn1OVfi0fmNdcchXlQAy5Jtcqrq2eY07qxxfRRGXPJ588ZcpMq6VuIRXiqacm0jTYkHoe44XcPhukbjuU6OdrgTBH5Ujf9wXPfFUBuAVLSLO6FbD8GFRI+qxmjc4+SNEjW9ATe67XpuRwuDOZ6hC/mj1llzEDTRNp3k+Xw0np7LZmu1AWN1qUsOnjY+ybGKVtJbRLqA/KV2Zw5tHm3HybisWs02anAjzotu7SreDG6aoAtIAT0Kr2P6INE8obEpGyNeLtIIS6vdV0QESbDolSO5QAl1ixYgBNXukuOyK6S6kl9joqGEp1psFHYRZOtcCOqzjHA7cd04DwmgG3BIFxwUL6yKIep4H3RVkkSkuoAX4VTPjcbQQwaj07KvmxaaQdACprG2Oi/lroouXi6jvxhtjoFyFr/nl7vUdypLBZqtWIKHKnGKh17O0D2Vaytkqaj+Y4kBTJ4wYyq2mpyJSSeStEYpIfBZUrdUnHpSYpF5sT2jsptHEGs901iNmwyO/NY7KNkkj5seP731fijid92xOEY+wXYfBD1Zdpy030iy5f4w4BVw57xSSqhdGZZi5jiNiF1bwHpQzB3Rndw3C8/qrlKmenwRUYWjr1IDcFXFJUFotZQqKmDmEdUrmvgd1WTa0TtMt3yAtB7qJUShgPO6j+c8x3G57KHV1rmDcKLHFcgVNQDckHZVzqx73HSDb3STYiHg3bYKM6uuRpZYd7Kl8s2R4RZ0vmAhxt9FMNSG/91XU0skthYjrdSHRvks1tybqxFUg3h04JBvdRpqdx2tZX+HYS8w3cLd1k+G/zOmyvjGyhzRxzxZw10mE6NH4uqX4U4JcIztLEQRHPEQfqOFsniJh8lUYYGtLjfYAXuey6L4KeGrMt0oxGqjIrZhcNcPwDstenxT32iGpyRWH5eTqlQ1pbtyFWVDbPN+FbTc2UGrA5C77XB5iivEYF7jZI1oY7bZOO2+qEt69VpwNXyRkiTFWSxfgeQeynU2PSD0yWv3VbHGXdENTEQ246LXLHCTpojRscGMQybE6T7qYyoZINnA/daaHFrb3TkckmnWxxDh1WeelVXEjRuGq/VKN1rFJjk7BZ9nEbKygxyN/4xpKxPC0Ki2uOyA2TMdbFKLtcEeu/CqcWgKNkzWjewCYmxuGIENdqcOy0ybGp5/xOs3s1OU0gkZqDv1SWJ+SVF7UY5LMSGXaFDfNJKSXPJKagG4uU/I2zDpU1FIkkLC46u91JILlEpS626kl2lhPVWJEhuJ2qpt2Vi3ZU9NMBUElWfm+lSYDr3jT3Q08Qc66h1NYyCN0kjgxjRck9AuEeI3xZUmUqyShwai+eqIzpdNIbMB/yiMJTdRFtcnwelW+hvZVuK1DRG4E87LyjlP4ss1Y9jdPFPhlO+ke8Nc2NpuB9V6UnrRiNJDPGbxyNBCnPBPFTkWNbeGc/wDEnw5os9URjMbY6lu7JQNwVq2UfDLGcjxl0rBPTn88fQe4Xa8Nog52t62ejhjfF5ZaHN7FY9Rhhk58mrHqZYuF0cbpsSaw2J3Uk1olcARcLf8AHfD6jxEGWmAp5uduCtSmyzNRTGOTkcFcTJhnF/w6ePPCa47ItMGvBFrbJJcObKbkXU19E6Jo34TYc5rvV0VO37LlL6IDstMf+QWKWPL0UZA8sKxFcWEBIaxxdySOyWyJLfL7GGYRGLggAeyakjbSv9IFwpYMkxs1pKkNwmSpe1pBLnbABG3whb67ZBhxl8fpK2fCssVGKtZUT3hiO+/4irLL2R4KAioqmiWXlrTw1bSRYADYdl0cOna5kc3PqF1AoI8rYdBIx7adhkbuHuFyreFgiYAAnHsA3vumi8LpKl0c5ycu2Y4EnutAzz4v5ZyBiUNBjFU+CeZupulhcAL23W+OkEYuSuC+Lngi3xOzD/EH1ToCxgjaAL8LXhSySqbpCVXydSwTNWFZlpmVOG1kNXC4XBjcCrQuBFwvNWWfh8zVkzFWVWEY15YB3bcgEe46ruuDOx2lpoxiMMU0gADnxbX+ytnijjacJWKSXg2eFwFxZA8hziLbBNsLxpJaRff6J0M9W/C1RfFsgRyPSRZPRgMjsiEQuTwhAJLuoUJ5NoqGHxgyBw2R6W2ToYHtv2StYNdrLPKbYxmN7uhUplZMxttZTEcdnOTmj2KrbTCrNHmgbpNrDssoX6Y9PUJRMOqbc8QkkbXSsCxiqT5jQrLUC33VLSSXcHAq1bKCFW0MKPUCbcIqiYtid1SNeG8IZnBwskgINNKTUAdFctdduwVfT0w8zVfdWUYAAupsDVc//NHAKiKmYZJpW6QAuE0PwzS4/UmrxKQxBx1aAF6ifC2QAkA/VE2HoArseeWJNRGm10c1yV4L4JlmJoZTtMrbeoi5W+zQx4dTjTH/ACx0Cl+Q4SAg7KRJAJYy1wuCq55ZTdyYu+yBTTNkja9hu0hWGH1wjksT6SqynpnYbO5jhqhdx7KWKbXICw6QVXKmBsccgeARwUzXYdFXRkPbuOD2QQfy2gEhSWyWCzNeGNSa5RpeI4eKeQxuNiOCqiSjDX3591v2I4fFiDDfaQcFaZXU0+GTObO27D+GQcFYMmHbyjp4c27h9lTNCNfcpYqYOJ4Tzmh523+iVloTsNj1WajbZMpWNBDWjc7BbrguENpomySNBk5+iqMr4MQBV1DfUfwNPT3Wzl/S624cVfJnMz5re2IZeBdA+XsE052+52UeWsjh2fI0fdbkjDYdTJoaXE2b1uqz+M08htGfMPtwgrHnErxsLhH191lJhLKccKaS8jsaqqqSQWbsD0QU9M97bnlWjaVnUXTmkMG1lPdXQyJHTkWTwanQLpLbpbqdibGy0dklroyN0lrbrQ8liBkOxQxgFqKQXCSPZqrcr7GgY9tk02XTUlvsnm3DuiqWVGrHHx9m3sopjLZgs51+6JZGLgnpdYXNHKNwzmsj/MA0n9EUx1RDe5CgRT6DpJNjwpjXNfCehVpAkUUwbYDdXUbxpWtwvLHiyu6aa7ADwoSAnNffhNSeo73+yEPIO3VA99nAX5UUBNpyApgddQISBspkbwRykwJTHbJ1h3sozXBOtdY3uohZJtb3TjbJlr7hG1+6jYCyxNkbYpIog30gor3WDY3CLAVzJI92G590sde5u0jCCi1GwJ4Wem6QD8VTHI69wPqlqaaCrjcyRrXtPQ7qKY2PNrJhtFJDKXsldpP5SbhJqwTooMcwJ2EtdUQeqEbub1AUfLNE3HZm1Q9VK07X/MVs9UXeWRM4Fh5FlR1VfPBEIMPjbCwdQFX7EW7NPvy27TbJa6noIbyysiYB1NlQVmeKfUWUUTqqTuBZv6rX6XLc2JVJqK2WSYngOdsPstow/AYKUCzQLdFoUYx7MxWioxbGHet4poj+WPn9VY0GCNpd3XkcdyXG5VtHCyOwa2ycuAk5fQDTI2xjYD6IrX9ln5kpUQMGyEhLt7JC5NDRiEtuUR9wkD7H2TGIBdJoA5RB26I7jhICNOLD2RRj0+yGoBc3YoKaTUNJ6KSQDlvVdUNGx0uP1kpvZoDAVevJv7KHT6W1cg2BO5TRJEy5ayyZLt04+QC+yjOk3RQzlVTG5zTY2PIKdoqjWzd3q6psTAssd0zE4R1GoG19itBUWscg1KdDKdrFVDX7qTDNoHH7qDAtmVDrgKQ6QEDuq6GU2G91LjcH8pCJENQ4uAsp7JbgbKuBEe/RPxycWuUmgLFr7J0PNlDjfff9k4ZLW3VYybG/3TwdYqDHKAOid87YKLAmtfsiEnuogl35Ra7lICT5ndY+YM3JAHumGyWSODX82I90ASGyElHJUFkd1Ha62yZrJdFO5xvsgRGxCV9Q3ywSL9VIoMPaGNMhu5RqZ4nha8qfDIbAKzoVkmnDRdrQNlIDgPYqFC/TI63dOuOobFQYIlg6gSOU2XgclNNksLJQbpEh0PR3FrqOCb7otVuqlQ6DJHfZZ1TNwb7pdY7pjHSduU1+F1+VgkHHKAm/CAofbuOEjn6Qm2vIG/KamlsEUA4ZA42umNQhk9imY5DfdFJIHbFSAkyPGnnZVUU//MJb9tgphlAYqGAE4rUyukNrANb0CklZKy8kn0NJJ2ChiR0g1cXUSWp+bm0NP8pvJ7lRajFXslLYgHNbtdPaDOZ0WLx1EbXtcC1w5ukmrnRVDb/gcdvZaTgFd8rM+iebaXbX6K+q59EAc9w0g3W+eOio3GGT0A33T7Jr9VQ4RVefSseHfforBs9tlkceQLiGpANrj6KVFVeroqBs1uDunW1BBFiVGhmz/NF4CfjmsAAf1WuQV1iN1Yw1WsXSaAu2S26XCdZIHdhbuqts5A9k9HPc9VGgLQSW6X+iMSW5UGGcWI1b+ydEm+5sPqoNATGy9U4Jr9LqF5nvsjbJtslQEvzOqwSe6jeZsk88DlRoRPY6wUbEHn5aS3ZZHLdM1j9UEguODymlbE2DhcofQs4GynMktsqbBiTSN1dyrNslj3U2hE2ORrZSnzLtayqxMfmmi2xClh6rZMf1WRB55TAdYc2SF47pASvO24Q6yb9Ey123si1bKxUMLV7og4FMF1lmr3QIkBw4SPcehCZLwFhddt7pD5DdJYcqPJJfkpHvUWSYA8qSBDplAKZllIGxKgzYg1jyL3KxtX5rexU1FjJbqg253WrV2KPixF9NCQJJiOTwFZyVLmG3N1otbiPlZ9Y0n/4r2JWnFjskb055o6VsMXqldtvyT3Uinp/l4WsIu7kk91X4aTVyGoeLAfhCs3VNjbSqZcMZ5gx9jqaoZWRXFz6rdCpDcZNdh7h5gNxayfrWNqYSxzbtPIXLc1YxVZHrhKQ6ShkPI4H1Xag1NUylnaMj175KR0TybtNhdbYJ9rXXIfDnN0GKyAxPBa8XuCuoCYFg3+4Kx5obZCRZMluOd04JHAlVsUpuLlSPOAI34WVqgLKKYNtY3KsIKkuHZa+x4Lr6ip9POdt+VW0MvGVA4uQpEVQOh/dU7ZthdPxS234so0Mu45xYHhSGzjobqkZPvudk5FUknZFAXAqC3nZOCosLhxKqTU7jgn6pW1Nja6VAXTZ9Tb9UAqd723Vaaq4CH5q24ISoTLyKa7eU3UPBgk36KFTVOtvP7pKiT+RICd/qiiI5g8hFELuHJViyYO7LXsPl00rR/lT4ZdIG/Kk1YE2ebTPEQQN+qmtlJtvZUFfJeeDvdWbZRpCi4jTJ/mm/dKJLqCyoueUbpvTcEKFEiYye210rqjb3Vayp13snBPtbqnQEwTF3ULPNt1UH5gMPqIQOrGnqigRPMxI90hqC1u6r/mwRsU2+s1Cye0dk19VpBPKrKyvDdh+JLJUNa3c3VbW1Ac3iwVkUhDDqsF/O6kQVBcd1r1XU+VMOlzyp1LUOMfpeLLSokkWc9YImOcSLBcky8KnNfiRidfrc2jpf5DQep6rbM7ZgGG4LUFo1T6SGgdSeFG8M8BOX8uQtmH/FTkyyknfU7dXx/wAcHL74HZv8TmxRBrTYAWTclW5rralDuWAkHZVVVXkTEX/dYWrGzlMlyCRay1zHMKp8ZpJqWqjEkUgsQ4K/p5HFgCjVTQ879V048FNHAwzEPCLNtK/U+XBZpLB530X6FencJxNlZRxTsOpjmgiy0PMmEUmMYTU01VC2WIt4I490fhrWzOy3TMLy4R3jBPNgbC6MnyInSRWsZubo4qoSG7SqN0rnAC6fpnuDrXWdx4JWbBBOT9FYwzAi1+Oi16lkdc7qfBK7zCFQ0CLuOawFzZPNqWjqqZkznE3KeY46ifZRokWwqrA7pyOqAHNlTCZxkUiF2oX90miNlq6pG1rpWTAm9/soUaejAvdKhk75gFoBFvcJh1Qb7HZNuNlHe8hFCZb0lQ61ro6mpcI3gHe3VQYHEAAdrop3l8TrnokIdp5/Lpml291ZRzMEWzrOAutbY8ujAvsFMp5HE2uUnwBMxCrcXQOHN1PZVPcwXdb6qkrXkPh45UsPJPKYFpFNte+6J1RoN3O/dVYkIvbZE55czdIkWLavy9wN0jsRLbquZK7fdI5x1IoCa6rMn1USSpc0/iuOyZfI5vGyiTvdflTSGThWuHsjFZ7lVL3HRfqgZM4XF9uVPamBbSVQI5uVAqqizdympZHDe/RV9XM4tvdJKgIuM1gbG12otKrxjRgpi8ymwTGMyOdCCTwubZlxiqhLYmPsxxF11sGJSXJNI6JhsTsx4iyae74IjqseCegW6fNBlmgfZaxkhobgEDuXPbqJPUq4BPnhY8zuTX0BPr6/yoCb9O61SbEHPkcb/upOYJniwB2sqeJocy5UIxVDZ//Z" 
+                class="profile-img" alt="Sharan U R">
+                </div>
+            <h1 class="hero-title">Sharan U R</h1>
+            <h2 class="hero-subtitle">Web Developer</h2>
+            <div class="hero-buttons">
+                <button class="btn-secondary" onclick="scrollToSection('contact')">Contact Me</button>
+                <button class="btn-resume" onclick="downloadResume()">
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </button>
+            </div>
+            <!-- Enhanced Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://github.com/Sharan-U-R" target="_blank" rel="noopener noreferrer" class="social-icon github-icon" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                    <span class="icon-tooltip">GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/sharan-u-r-9b4924296" target="_blank" rel="noopener noreferrer" class="social-icon linkedin-icon" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="icon-tooltip">LinkedIn</span>
+                </a>
+                <a href="sharanur174@gmail.com" class="social-icon email-icon" aria-label="Send Email">
+                    <i class="fas fa-envelope"></i>
+                    <span class="icon-tooltip">Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a Computer Science & Engineering student at MITE, passionate about web development and Java. 
+                        I'm always excited to take on challenges that expand my technical skill set. Outside of tech, 
+                        I enjoy drawing and playing table tennis.
+                    </p>
+                    <div class="hobbies">
+                        <h3>Hobbies & Interests</h3>
+                        <div class="hobby-tags">
+                            <span class="tag">🎨 Drawing</span>
+                            <span class="tag">🏓 Table Tennis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-timeline">
+                    <h3>Education Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Bachelor of Engineering</h4>
+                                <p class="institution">MITE • 2022–Present</p>
+                                <p class="grade">CGPA: 8.5</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>12th Grade</h4>
+                                <p class="institution">Vidyodaya PU College • 2020–2022</p>
+                                <p class="grade">93%</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>SSLC</h4>
+                                <p class="institution">Canara High School • 2018–2020</p>
+                                <p class="grade">95.68%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-img">
+                    </div>
+                    <h3>Java</h3>
+                    <p class="skill-description">Object-oriented programming language for building robust applications</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-img">
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p class="skill-description">Dynamic programming language for web development and interactive applications</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="skill-img">
+                    </div>
+                    <h3>C</h3>
+                    <p class="skill-description">High-level programming language for system and application development</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-img">
+                    </div>
+                    <h3>HTML5</h3>
+                    <p class="skill-description">Markup language for structuring web content and applications</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-img">
+                    </div>
+                    <h3>CSS3</h3>
+                    <p class="skill-description">Styling language for designing beautiful and responsive web interfaces</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-img">
+                    </div>
+                    <h3>VS Code</h3>
+                    <p class="skill-description">Powerful code editor with extensive extensions and debugging capabilities</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-img">
+                    </div>
+                    <h3>GitHub</h3>
+                    <p class="skill-description">Version control platform for collaborative software development</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-img">
+                    </div>
+                    <h3>MySQL</h3>
+                    <p class="skill-description">Relational database management system for data storage and retrieval</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glassy">
+                    <div class="project-icon-top">🍽️</div>
+                    <h3 class="project-title">Restaurant Website</h3>
+                    <p class="project-desc">A static restaurant website with a clean UI, multiple pages (menu, gallery, contact), built using HTML, CSS, and JavaScript.</p>
+                    <div class="project-tech-row">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <div class="project-btn-row">
+                        <a href="#" class="project-btn-outline">
+                            <span class="btn-icon" aria-label="GitHub"> 
+                                <i class="fab fa-github"></i>
+                            </span>GitHub
+                        </a>
+                        <a href="#" class="project-btn-outline">
+                            <span class="btn-icon" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </span>Live Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card glassy">
+                    <div class="project-icon-top">🌿</div>
+                    <h3 class="project-title">Medicinal Plant Identification</h3>
+                    <p class="project-desc">Web-based application using CNN and Flask to identify medicinal plants from leaf images. Built with HTML, CSS, JavaScript, and Python.</p>
+                    <div class="project-tech-row">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">CNN</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                    </div>
+                    <div class="project-btn-row">
+                        <a href="#" class="project-btn-outline">
+                            <span class="btn-icon" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </span>GitHub
+                        </a>
+                        <a href="#" class="project-btn-outline">
+                            <span class="btn-icon" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </span>Live Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card glassy">
+                    <div class="project-icon-top">💼</div>
+                    <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-desc">
+                        A personal portfolio website to showcase my projects, skills, and contact information. Designed with a clean, responsive layout and subtle animations.
+                        </p>
+                        <div class="project-tech-row">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    <div class="project-btn-row">
+                    <a href="https://github.com/your-username/portfolio" class="project-btn-outline" target="_blank">
+                            <span class="btn-icon" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </span>GitHub
+                    </a>
+                    <a href="https://your-portfolio-live-link.com" class="project-btn-outline" target="_blank">
+                        <span class="btn-icon" aria-label="Live Demo">
+                            <i class="fas fa-external-link-alt"></i>
+                        </span>Live Demo
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Experience & Involvement</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="experience-icon">💼</div>
+                <h3>Web Development Internship</h3>
+                <p class="experience-role">Intern – InnoByte Services</p>
+                <p class="experience-period">March 2025 – April 2025</p>
+                <p class="experience-desc">
+                    Redesigned an existing guest house website using HTML, CSS, and JavaScript. Improved frontend design, UI responsiveness, and gained valuable experience in real-world web development.
+                </p>
+            </div>
+            <div class="experience-card">
+                <div class="experience-icon">🎓</div>
+                <h3>Learning & Development</h3>
+                <p class="experience-role">Self-Directed Learning</p>
+                <p class="experience-period">2022 – Present</p>
+                <p class="experience-desc">
+                    Continuously expanding my knowledge in web development, Java programming, and emerging technologies through online courses, coding challenges, and personal projects.
+                </p>
+            </div>
+            <div class="experience-card">
+                <div class="experience-icon">💻</div>
+                <h3>Project Development</h3>
+                <p class="experience-role">Frontend Projects</p>
+                <p class="experience-period">2023 – Present</p>
+                <p class="experience-desc">
+                    Built and deployed several frontend-focused applications like a Restaurant Website and AI-powered Medicinal Plant Identifier using HTML, CSS, JavaScript, and Flask.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="achievement-icon">📜</div>
+                <h3>Responsive Web Design</h3>
+                <p class="achievement-desc">
+                    Certified by <strong>freeCodeCamp</strong> for successfully completing the Responsive Web Design course in 2024.
+                </p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">💻</div>
+                <h3>JavaScript Course</h3>
+                <p class="achievement-desc">
+                    Completed <strong>Unlocking the Power of JavaScript</strong> from Scaler Academy in 2024, strengthening frontend development skills.
+                </p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">🎮</div>
+                <h3>Prompt Wars Participation</h3>
+                <p class="achievement-desc">
+                    Actively participated in <strong>Prompt Wars</strong> organized by C.O.R.E, CSI & Crypton Club at MITE on 10th May 2025, showcasing prompt engineering creativity.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title white">Get In Touch</h2>
+                <div class="section-divider white"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p class="contact-desc">
+                        I'm always open to discussing new opportunities, collaborations, or just having a friendly chat about technology and web development.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon email-contact">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:sharan@example.com" class="contact-link">sharanur174@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon phone-contact">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <a href="tel:+919876543210" class="contact-link">+91 9538304519</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon github-contact">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/Sharan-U-R" target="_blank" rel="noopener noreferrer" class="contact-link">https://github.com/Sharan-U-R</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon linkedin-contact">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/sharan-u-r-9b4924296" target="_blank" rel="noopener noreferrer" class="contact-link">https://linkedin.com/in/sharan-u-r-9b4924296</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Sharan U R</h3>
+                <p>Computer Science & Engineering Student | Web Development Enthusiast</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Sharan-U-R" target="_blank" aria-label="GitHub">
+                        <svg class="contact-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.26.82-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/sharan-u-r-9b4924296" target="_blank" aria-label="LinkedIn">
+                        <svg class="contact-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.327-.027-3.037-1.849-3.037-1.851 0-2.132 1.445-2.132 2.939v5.667h-3.554V9h3.414v1.561h.049c.476-.899 1.637-1.849 3.369-1.849 3.602 0 4.267 2.368 4.267 5.455v6.285zM5.337 7.433c-1.144 0-2.069-.926-2.069-2.068 0-1.143.925-2.069 2.069-2.069 1.143 0 2.068.926 2.068 2.069 0 1.142-.925 2.068-2.068 2.068zm1.777 13.019H3.56V9h3.554v11.452z"/></svg>
+                    </a>
+                    <a href="mailto:sharanur174@gmail.com" aria-label="Email">
+                        <svg class="contact-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Sharan U R. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -284,7 +284,7 @@ function updateActiveNavLink() {
 const navStyle = document.createElement('style');
 navStyle.textContent = `
     .nav-link.active {
-        color: #f8f827ff !important;
+        color: #ffa500 !important;
     }
     
     .nav-link.active::after {

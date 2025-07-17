@@ -96,32 +96,32 @@ document.addEventListener('DOMContentLoaded', () => {
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const formData = new FormData(contactForm);
     const data = {
         name: formData.get('name'),
         email: formData.get('email'),
         message: formData.get('message')
     };
-    
+
     // Get the submit button
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
-    
+
     try {
         // Show loading state
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
-        
+
         // Simulate form submission (replace with actual API call)
         await new Promise(resolve => setTimeout(resolve, 1000));
-        
+
         // Show success message
         showNotification('Message sent successfully! Thank you for your message. I\'ll get back to you soon.', 'success');
-        
+
         // Reset form
         contactForm.reset();
-        
+
     } catch (error) {
         // Show error message
         showNotification('Error sending message. Please try again later or contact me directly via email.', 'error');
@@ -139,7 +139,7 @@ function showNotification(message, type = 'success') {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
@@ -150,7 +150,7 @@ function showNotification(message, type = 'success') {
             <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
         </div>
     `;
-    
+
     // Add styles for notification
     const style = document.createElement('style');
     style.textContent = `
@@ -232,16 +232,16 @@ function showNotification(message, type = 'success') {
             }
         }
     `;
-    
+
     // Add styles to head if not already present
     if (!document.querySelector('#notification-styles')) {
         style.id = 'notification-styles';
         document.head.appendChild(style);
     }
-    
+
     // Add notification to page
     document.body.appendChild(notification);
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentElement) {
@@ -260,18 +260,18 @@ function downloadResume() {
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     let currentSection = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.offsetHeight;
-        
+
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
             currentSection = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${currentSection}`) {
@@ -318,7 +318,7 @@ document.head.appendChild(hamburgerStyle);
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const rate = scrolled * -0.5;
-    
+
     const floatingElements = document.querySelectorAll('.floating-element');
     floatingElements.forEach((element, index) => {
         const speed = 0.5 + (index * 0.2);
@@ -329,21 +329,21 @@ window.addEventListener('scroll', () => {
 // Enhanced social icon interactions
 document.addEventListener('DOMContentLoaded', () => {
     const socialIcons = document.querySelectorAll('.social-icon');
-    
+
     socialIcons.forEach(icon => {
         // Add magnetic effect
         icon.addEventListener('mouseenter', (e) => {
             const rect = icon.getBoundingClientRect();
             const iconCenterX = rect.left + rect.width / 2;
             const iconCenterY = rect.top + rect.height / 2;
-            
+
             icon.style.transform = 'scale(1.1) translateY(-8px)';
         });
-        
+
         icon.addEventListener('mouseleave', () => {
             icon.style.transform = '';
         });
-        
+
         // Add click ripple effect
         icon.addEventListener('click', (e) => {
             const ripple = document.createElement('div');
@@ -359,9 +359,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 animation: ripple 0.6s ease-out;
                 pointer-events: none;
             `;
-            
+
             icon.appendChild(ripple);
-            
+
             setTimeout(() => {
                 ripple.remove();
             }, 600);
@@ -391,7 +391,7 @@ document.head.appendChild(rippleStyle);
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
-    
+
     setTimeout(() => {
         document.body.style.opacity = '1';
     }, 100);
@@ -401,7 +401,7 @@ window.addEventListener('load', () => {
 function typeWriter(element, text, speed = 50) {
     let i = 0;
     element.textContent = '';
-    
+
     function type() {
         if (i < text.length) {
             element.textContent += text.charAt(i);
@@ -409,7 +409,7 @@ function typeWriter(element, text, speed = 50) {
             setTimeout(type, speed);
         }
     }
-    
+
     type();
 }
 
@@ -459,44 +459,66 @@ window.addEventListener('scroll', () => {
     progressBar.style.width = scrollPercent + '%';
 });
 
-// Theme toggle functionality
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
+// Theme toggle functionality - Fixed version
+function initThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-function setTheme(mode) {
-    if (mode === 'light') {
-        body.classList.add('light-mode');
-    } else {
-        body.classList.remove('light-mode');
+    if (!themeToggle) {
+        console.error('Theme toggle button not found!');
+        return;
     }
-    localStorage.setItem('theme', mode);
+
+    function setTheme(mode) {
+        console.log('Setting theme to:', mode);
+        if (mode === 'light') {
+            body.classList.add('light-mode');
+            console.log('Light mode class added');
+        } else {
+            body.classList.remove('light-mode');
+            console.log('Light mode class removed');
+        }
+        localStorage.setItem('theme', mode);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+
+    // Add click event listener
+    themeToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log('Theme toggle clicked!');
+
+        const isLightMode = body.classList.contains('light-mode');
+        console.log('Current mode is light:', isLightMode);
+
+        if (isLightMode) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    });
+
+    console.log('Theme toggle initialized successfully');
 }
 
-// Load theme preference
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light') {
-    setTheme('light');
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initThemeToggle);
 } else {
-    setTheme('dark');
+    initThemeToggle();
 }
-
-themeToggle.addEventListener('click', () => {
-    if (body.classList.contains('light-mode')) {
-        setTheme('dark');
-    } else {
-        setTheme('light');
-    }
-});
 
 // Enhanced contact icon animations
 document.addEventListener('DOMContentLoaded', () => {
     const contactIcons = document.querySelectorAll('.contact-icon');
-    
+
     contactIcons.forEach(icon => {
         icon.addEventListener('mouseenter', () => {
             icon.style.transform = 'scale(1.1) rotate(5deg)';
         });
-        
+
         icon.addEventListener('mouseleave', () => {
             icon.style.transform = 'scale(1) rotate(0deg)';
         });
@@ -506,12 +528,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // Enhanced footer social icons
 document.addEventListener('DOMContentLoaded', () => {
     const footerIcons = document.querySelectorAll('.footer-social-link');
-    
+
     footerIcons.forEach(icon => {
         icon.addEventListener('mouseenter', () => {
             icon.style.transform = 'translateY(-3px) scale(1.1)';
         });
-        
+
         icon.addEventListener('mouseleave', () => {
             icon.style.transform = 'translateY(0) scale(1)';
         });
@@ -541,14 +563,5 @@ document.head.appendChild(keyboardStyle);
 
 // Resume download functionality
 function downloadResume() {
-    const link = document.createElement('a');
-    link.href = 'files/Sharan_UR_Resume.pdf'; // Change to .docx if needed
-    link.download = 'Sharan_U_R_Resume.pdf'; // Suggested filename for download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-   
-}
-
-
+    showNotification('Resume download will be available soon! Please contact me directly for my latest resume.', 'success');
+} 
